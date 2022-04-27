@@ -14,20 +14,18 @@ const SearchBar = ({ setSearchTerm }) => {
 
     //efecto de demora al realizar una busqueda de peliculas
     useEffect(() => {
-
+        //Evita que el timeout se ejecua al iniciar la pagina y lo ejecuta cuando el estado de la busqueda cambie
         if (initial.current) {
             initial.current = false;
             return;
         }
-
+        //Después de aprobar a validación se ejecuta este fragmento de código
         const timer = setTimeout(() => {
             setSearchTerm(state);
         }, 500)
         //Detenemos el timer una vez se haga la busqueda para que no esté iterando el efecto en todo momento
         return () => clearTimeout(timer)
     }, [setSearchTerm, state])
-
-
 
     return (
         <Wrapper>
