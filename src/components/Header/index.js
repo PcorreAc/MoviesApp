@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 //Importamos imagenes
 import RMDBLogo from '../../images/react-movie-logo.svg';
@@ -12,8 +13,11 @@ const Header = () => (
     /* Clases importadas del Header.style.js */
     <Wrapper>
         <Content>
-            <LogoImg src={RMDBLogo} alt='rmdb-logo'/>
-            <TMDBLogoImg src={TMDBLogo} alt='tmdb-logo'/>
+            <Link to='/'> {/* Decimos que cuando se presione el logo nos llevará al HomePage */}
+                <LogoImg src={RMDBLogo} alt='rmdb-logo' />
+            </Link>
+
+            <TMDBLogoImg src={TMDBLogo} alt='tmdb-logo' />
         </Content>
     </Wrapper>
 );
