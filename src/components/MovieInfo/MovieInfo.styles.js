@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
     background-position: center;
     padding: 40px 20px;
     animation: animationMovieInfo 1s;
-
-    @keyframes {
+    
+    @keyframes animationMovieInfo {
         from {
             opacity: 0;
         }
