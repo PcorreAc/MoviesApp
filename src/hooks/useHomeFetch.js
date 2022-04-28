@@ -41,7 +41,6 @@ export const useHomeFetch = () => {
     }, [searchTerm]);
 
     //Load More
-
     useEffect(() => {
         //si es distinto a false ejecutamos el Effect y añadimos una pagina más a la busqueda
         if (!isLoadingMore) return;

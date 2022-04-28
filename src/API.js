@@ -22,19 +22,23 @@ const apiSettings = {
       : `${POPULAR_BASE_URL}&page=${page}`;
     return await (await fetch(endpoint)).json();
   },
+
   fetchMovie: async movieId => {
     const endpoint = `${API_URL}movie/${movieId}?api_key=${API_KEY}`;
     return await (await fetch(endpoint)).json();
   },
+
   fetchCredits: async movieId => {
     const creditsEndpoint = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;
     return await (await fetch(creditsEndpoint)).json();
   },
+
   // Bonus material below for login
   getRequestToken: async () => {
     const reqToken = await (await fetch(REQUEST_TOKEN_URL)).json();
     return reqToken.request_token;
   },
+
   authenticate: async (requestToken, username, password) => {
     const bodyData = {
       username,
@@ -59,6 +63,7 @@ const apiSettings = {
       return sessionId;
     }
   },
+  
   rateMovie: async (sessionId, movieId, value) => {
     const endpoint = `${API_URL}movie/${movieId}/rating?api_key=${API_KEY}&session_id=${sessionId}`;
 
