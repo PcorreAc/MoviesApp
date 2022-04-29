@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 //Definimos estilos css globales
 export const GlobalStyle = createGlobalStyle`
@@ -30,7 +30,7 @@ body {
     }
 
     h3 {
-        font-size: 1.1rem;
+       font-size: 1.1rem;
         font-weight: 600;
     }
 
